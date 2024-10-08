@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Birthday Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Parent div with class "card" to enable flipping -->
+    <div class="card">
+        <!-- Front of the card -->
+        <div class="card-front">
+            <h1>Happy Birthday!</h1>
+            <p>
+                Click to open the card!
+            </p>
+        </div>
+
+        <!-- Inside of the card -->
+        <div class="card-inside">
+            <h2>What's Up?</h2>
+            <img src="https://i.imgur.com/3piKsm1.jpg" alt="Birthday Image" style="width: 100%; height: auto; max-width: 300px; margin-bottom: 20px;">
+            <p>Heard it's your Birthday!</p>
+        </div>
+    </div>
+
+    <!-- YouTube Audio Embed -->
+    <iframe id="youtube-audio" width="0" height="0" src="https://www.youtube.com/embed/a8ZW5TH-WlA?autoplay=0&controls=0&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+    <!-- Load YouTube Iframe API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+</body>
+</html>
