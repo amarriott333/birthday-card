@@ -14,6 +14,7 @@ cards.forEach((card, index) => {
 // Function to handle card click
 cards.forEach((card, index) => {
     card.addEventListener('click', () => {
+        console.log(`Current card index: ${currentCardIndex}, clicked card index: ${index}`); // Debug log
         if (index === currentCardIndex) {
             // Play the audio if it's the first card (card-front)
             if (index === 0 && audio) {
