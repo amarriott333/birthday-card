@@ -9,14 +9,14 @@
 <body>
     <div class="card-container">
         <!-- Parent div with class "card" to enable flipping -->
-        <div class="card" id="card-1">
-            <!-- Front of the card -->
+        <div class="card" id="card-front">
             <div class="card-front">
                 <h1>Happy Birthday!</h1>
                 <p>Click to open the card!</p>
             </div>
+        </div>
 
-            <!-- Inside of the card (Page 1) -->
+        <div class="card" id="card-inside" style="display:none;">
             <div class="card-inside">
                 <h2>What's Up?</h2>
                 <img src="https://i.imgur.com/3piKsm1.jpg" alt="Birthday Image" style="width: 100%; height: auto; max-width: 300px; margin-bottom: 20px;">
@@ -25,22 +25,39 @@
             </div>
         </div>
 
-        <!-- Page 2 (Be Strong) -->
-        <div class="card" id="card-2">
+        <div class="card" id="card-third" style="display:none;">
             <div class="card-inside">
                 <h2>Be Strong</h2>
-                <img src="https://i.imgur.com/jsF2EpL.jpg" alt="Be Strong Image" style="width: 100%; height: auto; max-width: 300px; margin-bottom: 20px;">
+                <img src="https://i.imgur.com/jsF2EpL.jpg" alt="Strong Image" style="width: 100%; height: auto; max-width: 300px; margin-bottom: 20px;">
                 <p>Do not take any crap from anyone.</p>
                 <small>(please click to view the next page)</small>
             </div>
         </div>
 
-        <!-- Page 3 (Be Yourself) -->
-        <div class="card" id="card-3">
+        <div class="card" id="card-fourth" style="display:none;">
             <div class="card-inside">
                 <h2>Be Yourself</h2>
                 <img src="https://i.imgur.com/UCDo4Z5.jpg" alt="Be Yourself Image" style="width: 100%; height: auto; max-width: 300px; margin-bottom: 20px;">
                 <p>Don't hide your personality.</p>
+                <small>(please click to view the next page)</small>
+            </div>
+        </div>
+
+        <div class="card" id="card-fifth" style="display:none;">
+            <div class="card-inside">
+                <h2>Just Relax</h2>
+                <img src="https://i.imgur.com/ycvUHQF.jpg" alt="Relax Image" style="width: 100%; height: auto; max-width: 300px; margin-bottom: 20px;">
+                <p>Hope you can get some nice rest.</p>
+                <small>(please click to view the next page)</small>
+            </div>
+        </div>
+
+        <div class="card" id="card-sixth" style="display:none;">
+            <div class="card-inside">
+                <h2>Loving Family</h2>
+                <img src="https://i.imgur.com/ov3Gn2f.jpg" alt="Relax Image" style="width: 100%; height: auto; max-width: 300px; margin-bottom: 20px;">
+                <p>Your Arty and Remy care very much!</p>
+                <small>(final page)</small>
             </div>
         </div>
     </div>
