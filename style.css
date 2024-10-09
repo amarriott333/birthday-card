@@ -1,12 +1,12 @@
 body {
     font-family: 'Arial', sans-serif;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: flex-start; /* Align items at the top */
+    justify-content: center;
+    align-items: flex-start;
     height: 100vh;
     margin: 0;
     background-color: #f4f4f4;
-    padding-top: 20px; /* Reduce space from the top on smaller screens */
+    padding-top: 50px;
 }
 
 .card-container {
@@ -18,13 +18,12 @@ body {
 
 .card {
     position: relative;
-    width: 90%;  /* Use percentage width for responsiveness */
-    max-width: 400px; /* Max width for larger screens */
-    height: auto; /* Allow height to adjust based on content */
+    width: 90vw;  /* Responsive width */
+    height: 80vh; /* Responsive height */
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px; /* Padding for content */
+    padding: 20px;
     box-sizing: border-box;
 }
 
@@ -38,11 +37,11 @@ body {
 }
 
 .card-front {
-    background-image: url('https://i.imgur.com/rPg1zfZ.jpg'); /* Background image */
-    background-size: cover; /* Cover the entire card */
-    background-position: center; /* Center the background image */
-    color: black; /* Change text color for visibility */
-    font-size: 5vw; /* Set font size relative to viewport width */
+    background-image: url('https://i.imgur.com/rPg1zfZ.jpg');
+    background-size: cover;
+    background-position: center;
+    color: black;
+    font-size: 4vw; /* Responsive font size */
     padding: 20px;
 }
 
@@ -55,32 +54,17 @@ body {
 }
 
 .card-inside h2 {
-    font-size: 4vw; /* Responsive font size for headings */
+    font-size: 3vw; /* Responsive font size */
 }
 
 .card-inside p {
-    font-size: 3vw; /* Responsive font size for messages */
-    margin: 0; /* Remove default margins */
-    white-space: pre-line; /* Keep line breaks */
+    font-size: 2.5vw; /* Responsive font size */
+    margin: 0;
+    white-space: pre-line;
 }
 
 .card-inside small {
     margin-top: 20px;
-    font-size: 2.5vw; /* Responsive font size for small text */
+    font-size: 2vw; /* Responsive font size */
     color: #888;
-}
-
-/* Media Queries for further adjustments */
-@media (max-width: 600px) {
-    .card {
-        width: 95%; /* Increase width on smaller screens */
-        padding: 10px; /* Less padding for smaller screens */
-    }
-
-    .card-front h1,
-    .card-inside h2,
-    .card-inside p,
-    .card-inside small {
-        font-size: 5vw; /* Adjust font size for smaller screens */
-    }
 }
