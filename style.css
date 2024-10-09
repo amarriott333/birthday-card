@@ -6,7 +6,7 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f4f4f4;
-    padding-top: 50px; /* Optional: space from the top */
+    padding-top: 20px; /* Reduce space from the top on smaller screens */
 }
 
 .card-container {
@@ -18,13 +18,23 @@ body {
 
 .card {
     position: relative;
-    width: 400px;  /* Portrait-oriented: Adjust the width */
-    height: 600px; /* Taller height for portrait orientation */
+    width: 90%;  /* Use percentage width for responsiveness */
+    max-width: 400px; /* Max width for larger screens */
+    height: auto; /* Allow height to adjust based on content */
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 0; /* No padding to allow full background */
+    padding: 20px; /* Padding for content */
     box-sizing: border-box;
+}
+
+.card-front, .card-inside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    background-color: white;
 }
 
 .card-front {
@@ -32,11 +42,8 @@ body {
     background-size: cover; /* Cover the entire card */
     background-position: center; /* Center the background image */
     color: black; /* Change text color for visibility */
-    height: 100%; /* Ensure it fills the card height */
-    display: flex; /* Flex to center content */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
+    font-size: 5vw; /* Set font size relative to viewport width */
+    padding: 20px;
 }
 
 .card-inside {
@@ -48,17 +55,32 @@ body {
 }
 
 .card-inside h2 {
-    font-size: 28px; /* Font size for page headings */
+    font-size: 4vw; /* Responsive font size for headings */
 }
 
 .card-inside p {
-    font-size: 18px; /* Font size for the message */
+    font-size: 3vw; /* Responsive font size for messages */
     margin: 0; /* Remove default margins */
     white-space: pre-line; /* Keep line breaks */
 }
 
 .card-inside small {
     margin-top: 20px;
-    font-size: 12px;
+    font-size: 2.5vw; /* Responsive font size for small text */
     color: #888;
+}
+
+/* Media Queries for further adjustments */
+@media (max-width: 600px) {
+    .card {
+        width: 95%; /* Increase width on smaller screens */
+        padding: 10px; /* Less padding for smaller screens */
+    }
+
+    .card-front h1,
+    .card-inside h2,
+    .card-inside p,
+    .card-inside small {
+        font-size: 5vw; /* Adjust font size for smaller screens */
+    }
 }
